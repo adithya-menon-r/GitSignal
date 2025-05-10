@@ -12,7 +12,7 @@ GitSignal is a low-maintenance, automated tool that uses GitHub Actions and the 
 
 3. Add the following GitHub repository secrets in your fork:
    - `EMAIL` – Your Gmail address  
-   - `PASSWORD` – Your Google App Password  
+   - `PASSWORD` – Your Google Account App Password  
    - `TOKEN` – Your GitHub Personal Accesss Token  
 
 4. Configure the repositories to track by editing `repos.txt`:
@@ -24,7 +24,7 @@ GitSignal is a low-maintenance, automated tool that uses GitHub Actions and the 
    ```
 
 5. Enable the GitHub Actions schedule:
-   - Enable GitHub Actions on your forked repository
+   - Enable [GitHub Actions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository) on your forked repository
 
    - Open `.github/workflows/main.yml`
 
