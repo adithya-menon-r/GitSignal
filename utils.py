@@ -1,7 +1,7 @@
 import os
 import json
 from datetime import datetime, timezone, timedelta
-from config import STATE_FILE
+from config import STATE_FILE, REPO_FILE
 
 def get_last_checked():
     if os.path.exists(STATE_FILE):
@@ -16,7 +16,6 @@ def save_last_checked(ts: datetime):
         json.dump({"last_checked": ts.isoformat().replace("+00:00", "Z")}, f)
 
 def load_repos():
-    from config import REPO_FILE
     if os.path.exists(REPO_FILE):
         with open(REPO_FILE) as f:
             return [line.strip() for line in f if line.strip()]
