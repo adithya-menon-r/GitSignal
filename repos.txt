@@ -16,6 +16,5 @@ amri-tah/burntbrotta.github.io
 amri-tah/LeetPath
 amri-tah/BurntBrotta-Flutter
 SaranDharshanSP/AmritaGPT
-https://github.com/adenon-amr/test
 SaranDharshanSP/NeuroScribe
 SaranDharshanSP/TN-Tourism.github.io
