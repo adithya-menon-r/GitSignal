@@ -33,7 +33,7 @@ GitSignal is a low-maintenance, automated tool that uses GitHub Actions and the 
             - cron: '0 * * * *'
         workflow_dispatch:
      ```
-     > ⚠️ **Note**: The current default schedule is to run every hour. You can change the schedule to run less frequently to save GitHub Actions minutes.
+   > ⚠️ **Note**: The current default schedule is to run every hour. You can change the schedule to run less frequently to save GitHub Actions minutes.
 
 6. Commit your changes, and you are all set!
 
