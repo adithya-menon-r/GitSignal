@@ -1,3 +1,4 @@
+import re
 import smtplib
 import markdown
 from email.mime.text import MIMEText
@@ -12,10 +13,16 @@ def send_email(issue):
     body_html = markdown.markdown(raw_body)
     url = issue["html_url"]
 
+    body_html = re.sub(
+        r'<img(.*?)>',
+        r'<img\1 style="max-width:100%; height:auto; display:block; margin:0 auto;">',
+        body_html
+    )
+
     html_body = f"""
     <html>
     <body style="margin: 0; padding: 0; background-color: #f4f4f7; font-family: 'Segoe UI', sans-serif;">
-        <div style="max-width: 600px; margin: 40px auto; background-color: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
+        <div style="max-width: 750px; margin: 40px auto; background-color: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
             <div style="background-color: #24292e; padding: 24px; text-align: center;">
                 <h1 style="color: white; margin: 0 auto; font-size: 22px; display: inline-block;">{title}</h1>
             </div>
