@@ -24,8 +24,6 @@ GitSignal is a low-maintenance, automated tool that uses GitHub Actions and the 
    ```
 
 5. Enable the GitHub Actions schedule:
-   - Enable [GitHub Actions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository) on your forked repository.
-
    - Grant `Read and write permissions` under Workflow permissions in the forked repository's GitHub Actions settings.
 
    - Open `.github/workflows/main.yml`
@@ -35,7 +33,7 @@ GitSignal is a low-maintenance, automated tool that uses GitHub Actions and the 
       schedule:
          - cron: '0 * * * *'
       ```
-   > ⚠️ **Note**: The current default schedule is to run every hour. You can change the schedule to run less frequently to save GitHub Actions minutes.
+      > ⚠️ **Note**: The current default schedule is to run every hour. You can change the schedule to run less frequently to save GitHub Actions minutes.
 
 6. Commit your changes, and you are all set!
 
